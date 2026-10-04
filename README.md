@@ -6,7 +6,7 @@
 
 This project is a Python-based risk analysis toolkit for equity portfolios. It answers the question: **"What risk does this portfolio actually carry?"**
 
-It is the natural continuation of my [Portfolio Optimization & Asset Allocation Tool](https://github.com/ilona-gavoille/portfolio-optimization-excel)) (Excel, Power Query, VBA, Solver), which answers the question *"Which portfolio should I build?"*. Together, the two projects cover two consecutive stages of the investment process:
+It is the natural continuation of my [Portfolio Optimization & Asset Allocation Tool](https://github.com/ilona-gavoille/portfolio-optimization-excel) (Excel, Power Query, VBA, Solver), which answers the question *"Which portfolio should I build?"*. Together, the two projects cover two consecutive stages of the investment process:
 
 ```
 Asset Allocation & Portfolio Construction   →   Risk Management
