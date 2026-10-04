@@ -94,14 +94,5 @@ portfolio-risk-analysis/
 - Historical data used as a proxy for the future
 - No transaction costs, taxes or market impact
 
-## Related project
-
-- [Portfolio Optimization & Asset Allocation Tool](LINK_TO_EXCEL_REPO): Markowitz framework, efficient frontier and Capital Allocation Line built with Excel, Power Query, VBA and Solver.
-
-## Author
-
-Ilona Gavoille: Master in Finance student, Paris-Saclay University.
-
----
 
 *This README will be updated as the project progresses.*
