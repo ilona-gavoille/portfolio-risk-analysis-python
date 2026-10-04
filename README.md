@@ -25,7 +25,7 @@ A second goal of this project is to build and demonstrate my Python skills for f
 ## Roadmap
 
 ### Level 1: Foundations
-- [x] Project setup (environment, repository structure)
+- [ ] Project setup (environment, repository structure)
 - [ ] Download, clean and cache historical price data
 - [ ] Daily returns
 - [ ] Annualized volatility
