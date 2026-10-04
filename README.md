@@ -1,8 +1,5 @@
 # Portfolio Risk Analysis in Python
 
-![Status](https://img.shields.io/badge/status-work%20in%20progress-orange)
-![Python](https://img.shields.io/badge/python-3.x-blue)
-
 > **Status: in development.** This repository is being built step by step. The roadmap below shows what is done and what is coming next.
 
 ## Overview
@@ -43,11 +40,11 @@ A second goal of this project is to build and demonstrate my Python skills for f
 - [ ] Rolling volatility
 - [ ] Value at Risk (VaR): parametric method
 - [ ] Risk contribution of each asset to the portfolio
+- [ ] Stress tests (e.g. COVID-19 crash, 2022 market downturn)
 
-### Level 3: Advanced (optional, to be explored later)
+### Level 3: Advanced (planned next phase, time permitting)
 - [ ] Monte Carlo VaR
 - [ ] VaR backtesting
-- [ ] Stress tests (e.g. COVID-19 crash, 2022 market downturn)
 - [ ] Import portfolio weights from the Excel optimization tool
 - [ ] Cross-check of Python results against the Excel model
 
