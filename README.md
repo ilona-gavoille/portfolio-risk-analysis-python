@@ -4,49 +4,41 @@
 
 ## Overview
 
-This project is a Python-based risk analysis toolkit for equity portfolios. It answers the question: **"What risk does this portfolio actually carry?"**
+This project is a Python toolkit to measure, explain and stress-test the risk of an equity portfolio. It answers one question: **"What risk does this portfolio carry, how much can it lose, and what happens in a crisis?"**
 
-It is the natural continuation of my [Portfolio Optimization & Asset Allocation Tool](https://github.com/ilona-gavoille/portfolio-optimization-excel) (Excel, Power Query, VBA, Solver), which answers the question *"Which portfolio should I build?"*. Together, the two projects cover two consecutive stages of the investment process:
-
-```
-Asset Allocation & Portfolio Construction   →   Risk Management
-        (Excel project)                           (this project)
-```
-
-A second goal of this project is to build and demonstrate my Python skills for finance, in particular data collection, cleaning and manipulation with pandas.
+It is also a learning project: each risk concept (volatility, VaR, Expected Shortfall, Monte Carlo simulation, stress testing...) is documented in a short theory note, then implemented from scratch in Python and interpreted on real market data.
 
 ## Scope
 
-- **Universe:** the same 8 U.S. equities as the Excel project (AAPL, MSFT, JPM, XOM, JNJ, AMZN, KO, WMT)
+- **Universe:** 8 U.S. large-cap equities across sectors (AAPL, MSFT, JPM, XOM, JNJ, AMZN, KO, WMT)
 - **Benchmark:** S&P 500 (SPY)
-- **Data source:** historical daily prices via `yfinance`
-- **Portfolios analyzed:** equally weighted portfolio, then the Maximum Sharpe and Minimum Variance portfolios from the Excel tool
+- **Data:** historical daily prices via `yfinance`, with a CSV snapshot included so the project runs without any API key
+- **Portfolios analyzed:** an equally weighted portfolio and a custom-weighted portfolio, to compare their risk profiles
 
 ## Roadmap
 
-### Level 1: Foundations
+### 1. Data and return statistics
 - [ ] Project setup (environment, repository structure)
-- [ ] Download, clean and cache historical price data
-- [ ] Daily returns
-- [ ] Annualized volatility
-- [ ] Correlation matrix
-- [ ] Maximum drawdown
-- [ ] Beta versus the S&P 500
-- [ ] First visualizations
+- [ ] Download, clean and store historical price data
+- [ ] Simple and log returns
+- [ ] Annualized volatility, covariance and correlation matrix
+- [ ] Drawdown and maximum drawdown
+- [ ] Beta versus the S&P 500, Sharpe and Sortino ratios
 
-### Level 2: Risk measures
-- [ ] Value at Risk (VaR): historical method
-- [ ] Conditional VaR (CVaR / Expected Shortfall)
-- [ ] Rolling volatility
-- [ ] Value at Risk (VaR): parametric method
-- [ ] Risk contribution of each asset to the portfolio
-- [ ] Stress tests
-
-### Level 3: Advanced (planned next phase, time permitting)
+### 2. Value at Risk and Expected Shortfall
+- [ ] Historical VaR
+- [ ] Parametric (variance-covariance) VaR
 - [ ] Monte Carlo VaR
-- [ ] VaR backtesting
-- [ ] Import portfolio weights from the Excel optimization tool
-- [ ] Cross-check of Python results against the Excel model
+- [ ] Conditional VaR (Expected Shortfall)
+- [ ] Comparison of the three methods and their limitations
+- [ ] VaR backtesting (exceedance count, Kupiec test)
+
+### 3. Risk decomposition and stress testing
+- [ ] Risk contribution of each asset to portfolio risk
+- [ ] Rolling volatility
+- [ ] Historical stress tests (2008 financial crisis, 2020 Covid crash)
+- [ ] Hypothetical scenarios (e.g. equity market shock, sector-specific shock)
+- [ ] Final summary report
 
 ## Risk metrics covered
 
@@ -56,43 +48,39 @@ A second goal of this project is to build and demonstrate my Python skills for f
 | Maximum drawdown | What was the worst peak-to-trough loss? |
 | Beta | How much does the portfolio move when the market moves? |
 | Value at Risk (VaR) | What loss should not be exceeded with a given confidence level over a given horizon? |
-| Conditional VaR (CVaR) | When the VaR is exceeded, what is the average loss? |
+| Expected Shortfall (CVaR) | When the VaR is exceeded, what is the average loss? |
+| Backtesting | Is the VaR model reliable in practice? |
 | Risk contribution | Which asset contributes the most to total portfolio risk? |
+| Stress tests | How much would the portfolio lose in an extreme scenario? |
 
 ## Tech stack
 
 - **Python**
 - **pandas**: data manipulation and time series
-- **numpy**: numerical and matrix computations
-- **scipy**: statistical distributions
-- **matplotlib / seaborn**: visualization
+- **numpy**: numerical computations and Monte Carlo simulation
+- **scipy**: statistical distributions and tests
+- **matplotlib**: visualization
 - **yfinance**: market data
-- **pytest**: unit tests (planned)
 - **Jupyter**: exploration and demonstration
 
-## Planned project structure
+## Project structure
 
 ```
 portfolio-risk-analysis/
-├── data/                # local data cache (not versioned)
-├── src/
-│   ├── data_loader.py   # download, clean, cache
-│   ├── returns.py       # return calculations
-│   ├── risk_metrics.py  # volatility, VaR, CVaR, drawdown
-│   ├── portfolio.py     # weights and risk contributions
-│   └── plots.py         # charts
-├── notebooks/           # exploration and demonstration
-├── tests/               # unit tests
-├── main.py
+├── data/                # price data (CSV snapshot)
+├── src/                 # reusable functions (returns, risk metrics, simulation)
+├── notebooks/           # one notebook per block, with interpretation
+├── docs/
+│   └── theory.md        # theory notes on each risk concept
 ├── requirements.txt
 └── README.md
 ```
 
-## Limitations (by design, for now)
+## Limitations
 
 - Equity-only universe of 8 predefined stocks
 - Historical data used as a proxy for the future
+- Normality assumption in parametric VaR, which underestimates tail risk
 - No transaction costs, taxes or market impact
-
 
 *This README will be updated as the project progresses.*
