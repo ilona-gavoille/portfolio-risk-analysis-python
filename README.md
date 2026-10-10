@@ -18,12 +18,12 @@ It is also a learning project: each risk concept (volatility, VaR, Expected Shor
 ## Roadmap
 
 ### 1. Data and return statistics
-- [ ] Project setup (environment, repository structure)
-- [ ] Download, clean and store historical price data
-- [ ] Simple and log returns
-- [ ] Annualized volatility, covariance and correlation matrix
-- [ ] Drawdown and maximum drawdown
-- [ ] Beta versus the S&P 500, Sharpe and Sortino ratios
+- [X] Project setup (environment, repository structure)
+- [x] Download, clean and store historical price data
+- [x] Simple and log returns
+- [x] Annualized volatility, covariance and correlation matrix
+- [x] Drawdown and maximum drawdown
+- [x] Beta versus the S&P 500, Sharpe and Sortino ratios
 
 ### 2. Value at Risk and Expected Shortfall
 - [ ] Historical VaR
