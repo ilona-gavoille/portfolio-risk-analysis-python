@@ -17,7 +17,7 @@ It is also a learning project: each risk concept (volatility, VaR, Expected Shor
 
 ## Roadmap
 
-### 1. Data and return statistics
+### 1. Data and return statistics [Completed]
 - [X] Project setup (environment, repository structure)
 - [x] Download, clean and store historical price data
 - [x] Simple and log returns
