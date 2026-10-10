@@ -65,15 +65,13 @@ It is also a learning project: each risk concept (volatility, VaR, Expected Shor
 ## Project structure
 
 ```
-portfolio-risk-analysis/
-├── data/                # price data (CSV snapshot)
-├── src/                 # reusable functions (returns, risk metrics, simulation)
-├── notebooks/           # one notebook per block, with interpretation
-├── docs/
-│   └── theory.md        # theory notes on each risk concept
+├── README.md
 ├── requirements.txt
-└── README.md
-```
+├── data/
+│   └── prices.csv
+└── notebooks/
+    ├── 01_data.ipynb
+    └── 02_returns_and_portfolio.ipynb
 
 ## Limitations
 
