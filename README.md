@@ -72,9 +72,9 @@ It is also a learning project: each risk concept (volatility, VaR, Expected Shor
 └── notebooks/
     ├── 01_data.ipynb
     └── 02_returns_and_portfolio.ipynb
+```
 
 ## Limitations
-
 - Equity-only universe of 8 predefined stocks
 - Historical data used as a proxy for the future
 - Normality assumption in parametric VaR, which underestimates tail risk
