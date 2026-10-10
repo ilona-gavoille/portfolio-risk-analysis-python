@@ -71,7 +71,7 @@ It is also a learning project: each risk concept (volatility, VaR, Expected Shor
 │   └── prices.csv
 └── notebooks/
     ├── 01_data.ipynb
-    └── 02_returns_and_portfolio.ipynb
+    └── 02_returns.ipynb
 ```
 
 ## Limitations
